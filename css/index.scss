@@ -1,0 +1,160 @@
+@import "./lib/countPX.scss";
+
+.main-top {
+  width: p2r(750px);
+  height: p2r(1265px);
+  background: url("../image/main-top.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  & > div:nth-child(2) {
+    width: 3rem;
+    height: 3rem;
+    background: url("../image/six-snow23.png") no-repeat;
+    background-size: auto 100%;
+    position: absolute;
+    top: p2r(554px);
+    left: p2r(234px);
+    animation: snow 2s steps(22, end) 0ms infinite normal;
+  }
+  & > div:nth-child(3) {
+    width: 100%;
+    height: p2r(500px);
+    background: url("../image/cannon-snow24.png") no-repeat;
+    background-size: auto 100%;
+    position: absolute;
+    bottom: p2r(65px);
+    left: 0;
+    // snow是keyframes动画名称   第一个时间是完成动画花费的时间第二是延迟多少秒开始动画  然后是无限循环，normal是正常顺序播放 （reverse为反向）
+    animation: snow 2s steps(23, end) 0ms infinite normal;
+  }
+}
+
+@keyframes snow {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+.main-center {
+  width: p2r(750px);
+  height: p2r(4684px);
+  background: url("../image/main-center.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  margin-top: p2r(-110px);
+  .header {
+    width: p2r(569px);
+    height: p2r(197px);
+    background: url("../image/main-tab.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: p2r(-82px);
+    left: p2r(90.5px);
+  }
+  & > section:nth-of-type(1) {
+    position: absolute;
+    top: p2r(396px);
+    height: p2r(895px);
+    font-size: 14px;
+    color: #fff;
+    .c-rule1 {
+      position: absolute;
+      right: 0;
+      width: p2r(80px);
+      height: p2r(65px);
+      margin-right: p2r(48px);
+      cursor: pointer;
+      border: 1px solid;
+    }
+    .s-numberOfTimes {
+      padding-top: p2r(46px);
+      height: p2r(40px);
+      padding-left: p2r(87px);
+      position: relative;
+      display: inline-block;
+      .c-again {
+        position: absolute;
+        left: p2r(336px);
+        display: inline-block;
+        height: p2r(40px);
+        width: p2r(144px);
+        border: 1px solid;
+        box-sizing: border-box;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+    }
+
+    .c-title {
+      text-align: center;
+      margin: p2r(60px) 0 p2r(35px) 0;
+    }
+
+    & > ul {
+      padding: 0 p2r(100px);
+      .a-card {
+        cursor: pointer;
+        width: p2r(166px);
+        height: p2r(248px);
+        background: url("../image/card-s.png") no-repeat;
+        background-size: 100% 100%;
+        float: left;
+        margin-right: p2r(26px);
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+        &:nth-child(n + 4) {
+          margin-top: p2r(26px);
+        }
+      }
+    }
+    .c-record {
+      position: absolute;
+      height: p2r(30px);
+      width: p2r(194px);
+      border: 1px solid;
+      bottom: p2r(58px);
+      left: p2r(278px);
+      cursor: pointer;
+    }
+  }
+  & > section:nth-of-type(2) {
+    position: absolute;
+    top: p2r(1650px);
+    width: 100%;
+    height: p2r(482px);
+    color: #fff;
+    .c-rule2 {
+      position: absolute;
+      right: 0;
+      width: p2r(80px);
+      height: p2r(65px);
+      margin-right: p2r(48px);
+      cursor: pointer;
+      border: 1px solid;
+    }
+    .c-goForward {
+      position: absolute;
+      bottom: 0;
+      width: p2r(302px);
+      height: p2r(72px);
+      border: 1px solid;
+      left: p2r(224px);
+    }
+  }
+  & > section:nth-of-type(3) {
+  }
+  & > section:nth-of-type(4) {
+  }
+}
+
+.main-footer {
+  width: p2r(750px);
+  height: p2r(435px);
+  background: url("../image/main-footer.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: -1px;
+}

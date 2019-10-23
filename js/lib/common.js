@@ -1,21 +1,20 @@
 
 // 动态设置根大小 以致 rem
-(function (win) {
-    var resizeFun = function () {
-        document.documentElement.style.fontSize =
-            (document.documentElement.clientWidth / 750) * 100 + 'px';
-    }
-    resizeFun();
+// (function (win) {
+//     var resizeFun = function () {
+//         document.documentElement.style.fontSize =
+//             (document.documentElement.clientWidth / 750) * 100 + 'px';
+//     }
+//     resizeFun();
+//     var resizeId = null;
 
-    var resizeId = null;
+//     win.onresize = function () {
+//         clearTimeout(resizeId);
+//         resizeId = setTimeout(resizeFun, 30);
+//     }
 
-    win.onresize = function () {
-        clearTimeout(resizeId);
-        resizeId = setTimeout(resizeFun, 30);
-    }
-
-    win.addEventListener("load", resizeFun, false);//false 是默认的 可以不写
-})(window)
+//     win.addEventListener("load", resizeFun, false);//false 是默认的 可以不写
+// })(window)
 
 
 var common = {
