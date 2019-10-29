@@ -117,9 +117,11 @@ input::-ms-reveal {
 html {
   font-size: calc(100vw / 7.5);
   /* font-size: 100px; */
+  height: 100%;
 }
 
 body {
+  height: 100%;
   background: #fff;
   color: #555;
   font-size: 14px;
@@ -152,6 +154,14 @@ body {
 }
 .clearfix {
   *zoom: 1;
+}
+
+.nullu::before {
+  content: ".";
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
 }
 
 #layout {

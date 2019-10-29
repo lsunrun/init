@@ -1,5 +1,5 @@
 $browser-default-font-size: 100px !default; //  此处应该是根节点大小  变量的值可以根据自己需求定义
 
-@function p2r($px) {
+@function rpx($px) {
   @return $px/$browser-default-font-size * 1 + rem;
 }

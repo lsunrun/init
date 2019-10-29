@@ -113,7 +113,8 @@ window.onload = function () {
         var target = e.target;
         if (target) {
             // if (showTitle()) return;
-            if (target.classList.contains("")) {
+            if (target.classList.contains("m-prize")) {
+                console.log(11111111);
                 /**
                  *  window.location.href = "route_pushid=10";   优惠券10
                  *  window.location.href = "route_pushid=11";   优惠券50
@@ -121,9 +122,9 @@ window.onload = function () {
                  *  window.location.href = "share.action ";     分享按钮
                  *  window.location.href = "i4_activity_appid=" + id; //游戏点击
                  */
-                window.location.href = "route_pushid=10";
-                window.location.href = "route_pushid=11";
-                window.location.href = "route_pushid=12";
+                // window.location.href = "route_pushid=10";
+                // window.location.href = "route_pushid=11";
+                // window.location.href = "route_pushid=12";
                 return;
             } else if (target.classList.contains("btn-share")) { ////分享按钮点击
                 common.showBasePopup({
@@ -147,6 +148,23 @@ window.onload = function () {
         }
     })
 
+    /**
+     * 显示隐藏 点击查看奖品
+     */
+    var see_prize = document.querySelector('.see-prize').querySelector('p');
+    see_prize.onclick = function () {
+        var m_table = document.querySelector(".m-table");
+        var p_prize = document.querySelector(".p-prize");
+        if (m_table.classList.length > 1) {
+            m_table.classList.remove("active");
+            p_prize.style.opacity = 0;
+        } else {
+            m_table.classList.add("active");
+            p_prize.style.opacity = 1;
+        }
+
+    }
+// // // // // // // // // // // 
     //点击区域关闭
     // $popup.onclick = function (e) {
     //     e.preventDefault();
